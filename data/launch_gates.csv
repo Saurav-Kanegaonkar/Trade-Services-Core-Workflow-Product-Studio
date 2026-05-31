@@ -1,0 +1,6 @@
+gate_id,opportunity_id,gate,owner,required_evidence,status,risk,next_step
+GATE-001,OPP-001,Discovery evidence,Product,"8 dispatcher interviews, 20 support tickets coded, top reason codes validated",Ready,Low,Write final PRD problem framing.
+GATE-002,OPP-001,Design prototype,Design,Clickable reschedule flow tested with 5 dispatcher users,In progress,Medium,Tighten exception copy and mobile states.
+GATE-003,OPP-001,Technical feasibility,Engineering,"Availability, skills, route, notification, and audit events mapped",At risk,High,Split dependency checks into read-only MVP and later automation.
+GATE-004,OPP-001,Launch instrumentation,Analytics,"Events, dashboard definitions, and success metric guardrails approved",In progress,Medium,Add promise-window exception rate and reschedule completion funnel.
+GATE-005,OPP-001,Sales and CS enablement,Customer Success,"Demo script, rollout checklist, objection handling, and support macros",Not started,Medium,Draft enablement from PRD and prototype.

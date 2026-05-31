@@ -1,17 +1,23 @@
--- Priority queue foundation
-select
-  entity_id,
-  avg(risk_score) as avg_risk_score,
-  avg(quality_score) as avg_quality_score,
-  sum(value_pool) as value_pool
-from daily_metrics
-group by 1
-order by avg_risk_score desc;
+-- Product readiness checks for the synthetic trade services workflow artifact.
 
--- Action readiness
 select
-  action_type,
-  avg(expected_lift_pct) as expected_lift,
-  avg(effort_hours) as effort_hours
-from recommended_actions
-group by 1;
+  opportunity_id,
+  product_area,
+  priority_score,
+  decision
+from priority_queue
+where decision = 'Build PRD now'
+order by priority_score desc;
+
+select
+  opportunity_id,
+  count(*) as p0_requirements
+from prd_requirements
+where priority = 'P0'
+group by opportunity_id;
+
+select
+  status,
+  count(*) as launch_gates
+from launch_gates
+group by status;

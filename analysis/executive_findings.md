@@ -2,14 +2,15 @@
 
 ## What I analyzed
 
-I joined 5,040 daily metric rows, 760 source events, and 220 action candidates for field service SaaS scheduling, estimating, job management, invoicing, and payment workflows.
+I modeled eight core workflow opportunities across scheduling, estimates, job management, invoicing, payments, communication, pricebook quality, and customer portal follow-up for a trade services SaaS core platform.
 
 ## Findings
 
-- The highest-priority trade workflow is TRA022 with a priority score of 98.39.
-- The top queue combines 49.9 average risk with 81.0 quality score and $858,979 estimated impact.
-- The strongest use case is turning repeated stakeholder questions into a ranked operating digest.
+- The top opportunity is OPP-001, Scheduling and dispatch, with a priority score of 72.4.
+- The strongest customer problem is: Dispatchers lose time when urgent calls, skill matching, and arrival windows live in separate mental models.
+- The PRD focus should be: A guided reschedule flow with skill, proximity, and customer promise checks will reduce missed windows and support escalations.
+- Launch risk is concentrated in technical feasibility and enablement readiness, not in problem clarity.
 
 ## Recommendation
 
-Prioritize the top queue before scaling more dashboards. The project should help leaders decide which trade workflow risks need action, validation, or monitoring.
+Build the guided reschedule PRD first, keep the first release read-only where dependency confidence is lower, and launch with dispatcher adoption, missed-window rate, support contact rate, and schedule move completion as success metrics.

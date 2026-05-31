@@ -1,0 +1,10 @@
+{
+  "artifact_type": "PRD plus workflow prioritization product studio",
+  "workflow_count": 8,
+  "top_opportunity": "OPP-001",
+  "top_product_area": "Scheduling and dispatch",
+  "top_priority_score": 72.4,
+  "ready_gates": 1,
+  "at_risk_gates": 1,
+  "enablement_assets": 4
+}

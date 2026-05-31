@@ -1,0 +1,5 @@
+asset_id,opportunity_id,audience,asset,purpose,owner,due_stage,readiness
+EN-001,OPP-001,Sales,Dispatcher workflow demo script,Explain how guided rescheduling protects customer promises.,Product,Beta,35
+EN-002,OPP-001,Customer Success,Rollout checklist,"Help customers configure skills, arrival windows, and notification defaults.",CS Enablement,Beta,45
+EN-003,OPP-001,Support,Reschedule exception macros,Answer common questions about risky moves and customer notifications.,Support Ops,Launch,20
+EN-004,OPP-001,Analytics,Adoption readout,"Track reschedule completion, exception reasons, missed windows, and support contacts.",Product Analytics,Launch,55

@@ -6,49 +6,113 @@
   <title>Trade Services Core Workflow Product Studio</title>
   <link rel="stylesheet" href="src/styles.css">
 </head>
-<body style="--accent:#a16207;--bg:#fff7ed">
+<body>
   <main class="shell">
-    <header class="hero">
+    <header class="topbar">
       <div>
-        <p class="eyebrow">Decision Brief / field service SaaS scheduling, estimating, job management, invoicing, and payment workflows</p>
+        <p class="eyebrow">Product requirements studio</p>
         <h1>Trade Services Core Workflow Product Studio</h1>
       </div>
-      <aside>
-        <b>Purpose</b>
-        <span>Turn messy trade workflow-level signals into a ranked operating artifact with recommendations a stakeholder can act on.</span>
-      </aside>
+      <nav class="tabs" aria-label="Artifact views">
+        <button class="tab is-active" data-view="cockpit" type="button">Cockpit</button>
+        <button class="tab" data-view="prd" type="button">PRD</button>
+        <button class="tab" data-view="launch" type="button">Launch</button>
+      </nav>
     </header>
-    <section class="metrics">
-      <article><span>Modeled rows</span><strong>6.0K+</strong><em>source-style</em></article>
-      <article><span>Ranked queue</span><strong>25</strong><em>trade workflows</em></article>
-      <article><span>Action pool</span><strong>220</strong><em>candidates</em></article>
-      <article><span>Review time</span><strong>-6 hrs</strong><em>weekly</em></article>
-    </section>
-    <section class="main-grid">
-      <article class="panel lead">
-        <p class="eyebrow">Decision context</p>
-        <h2>Priority queue</h2>
-        <table>
-          <thead><tr><th>trade workflow</th><th>Signal</th><th>Risk</th><th>Next move</th></tr></thead>
-          <tbody>
-            <tr><td>Segment A</td><td>Forecast risk</td><td>High</td><td>Escalate with source check</td></tr>
-            <tr><td>Segment B</td><td>Recommended action</td><td>Medium</td><td>Test with clear owner</td></tr>
-            <tr><td>Segment C</td><td>Quality gap</td><td>Watch</td><td>Document metric definition</td></tr>
-          </tbody>
-        </table>
+
+    <section class="hero-grid">
+      <article class="hero-copy">
+        <p class="eyebrow">Core platform problem</p>
+        <h2>Make the service workflow easier to run from dispatch change to paid invoice.</h2>
+        <p>
+          This artifact turns synthetic workflow research into a product decision packet for a field service SaaS core platform.
+          It connects customer pain, product requirements, launch gates, and enablement work in one interview-ready packet.
+        </p>
       </article>
-      <article class="panel narrative">
-        <p class="eyebrow">What the analysis says</p>
-        <h2>Recommendations over screenshots</h2>
-        <p>The artifact is built around decisions, not dashboard decoration: each source table feeds a ranked queue, and each queue item resolves into a recommendation.</p>
-        <p>The strongest opportunities appear where performance upside, measurement quality, and operating readiness overlap.</p>
-      </article>
+      <aside class="brief-card" id="top-brief">
+        <span>Loading top opportunity</span>
+      </aside>
     </section>
-    <section class="recommendations">
-      <article><b>01</b><h3>Validate</h3><p>Confirm source definitions before scaling the insight into recurring reporting.</p></article>
-      <article><b>02</b><h3>Prioritize</h3><p>Move the highest-value trade workflow segment into the next operating review.</p></article>
-      <article><b>03</b><h3>Automate</h3><p>Convert the queue into a stakeholder-ready digest for repeated decisions.</p></article>
+
+    <section class="kpis" id="kpis" aria-label="Summary metrics"></section>
+
+    <section class="view is-visible" id="view-cockpit">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Workflow intelligence</p>
+          <h2>Opportunity queue</h2>
+        </div>
+        <p>Prioritized by frequency, severity, adoption impact, cash-flow impact, confidence, effort, and dependency risk.</p>
+      </div>
+      <div class="split">
+        <div class="panel table-panel">
+          <table>
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Area</th>
+                <th>Persona</th>
+                <th>Score</th>
+                <th>Decision</th>
+              </tr>
+            </thead>
+            <tbody id="priority-table"></tbody>
+          </table>
+        </div>
+        <div class="panel" id="research-themes"></div>
+      </div>
+    </section>
+
+    <section class="view" id="view-prd">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">PRD builder</p>
+          <h2>Guided reschedule flow</h2>
+        </div>
+        <p>Problem framing, requirements, acceptance criteria, telemetry, non-goals, and open questions for the top product bet.</p>
+      </div>
+      <div class="prd-grid">
+        <article class="panel prd-main" id="prd-main"></article>
+        <aside class="panel">
+          <h3>PRD guardrails</h3>
+          <dl class="definition-list">
+            <div>
+              <dt>Success metrics</dt>
+              <dd>Reschedule completion, missed-window rate, support contact rate, and dispatcher time to confirm.</dd>
+            </div>
+            <div>
+              <dt>Non-goals</dt>
+              <dd>No autonomous dispatching, live route optimization, pricing logic, or replacement of technician capacity planning in the first release.</dd>
+            </div>
+            <div>
+              <dt>Open questions</dt>
+              <dd>Which exception reason codes map to training, and which should create configuration changes?</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="view" id="view-launch">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Launch readiness</p>
+          <h2>Release gates and enablement</h2>
+        </div>
+        <p>What Product, Design, Engineering, Analytics, Sales, Support, and Customer Success need before the feature is ready.</p>
+      </div>
+      <div class="launch-grid">
+        <article class="panel">
+          <h3>Release gates</h3>
+          <div class="gate-list" id="launch-gates"></div>
+        </article>
+        <article class="panel">
+          <h3>Enablement assets</h3>
+          <div class="asset-list" id="enablement-assets"></div>
+        </article>
+      </div>
     </section>
   </main>
+  <script src="src/app.js"></script>
 </body>
 </html>
